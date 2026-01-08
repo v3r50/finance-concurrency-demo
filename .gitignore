@@ -1,10 +1,18 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+.venv/
 
 # PyCharm / IDE
 .idea/
+
+# ===== CMake / C++ =====
+cpp/build/
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
 
 # OS
 .DS_Store
