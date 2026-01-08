@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm / IDE
+.idea/
+
+# OS
+.DS_Store
