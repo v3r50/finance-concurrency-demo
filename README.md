@@ -104,8 +104,6 @@ python3 part-two/cpu_bench.py --end 200000 --workers 8
 
 I/O-bound benchmark:
 ```bash
-bash
-Skopiuj kod
 python3 part-two/io_bench.py --tasks 500 --delay_ms 10 --workers 100
 ```
 
