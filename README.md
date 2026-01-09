@@ -149,4 +149,4 @@ from runtime to compile time.
 
 ### Python concurrency benchmarks
 ![CPU benchmark](docs/img/cpu_bound.png)
-![IO benchmark](docs/img/io_bound.png)
+![IO benchmark](docs/img/IO_bound.png)
