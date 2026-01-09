@@ -6,13 +6,17 @@ __pycache__/
 # PyCharm / IDE
 .idea/
 
-# ===== CMake / C++ =====
+# CMake / C++
 cpp/build/
 build/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 compile_commands.json
+
+# Rust
+rust/target/
+rust/**/target/
 
 # OS
 .DS_Store
