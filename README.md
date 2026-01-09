@@ -22,7 +22,7 @@ The project shows:
 
 - **Rust**
   - `rust/src/bin/naive.rs` — intentionally invalid (rejected by the compiler)
-  - `rust/src/bin/mutex.rs` — correct shared-state synchronization
+  - `rust/src/bin/mutex_stats.rs` — correct shared-state synchronization and statistics
 
 - **Part two: Python concurrency models**
   - `part-two/cpu_bench.py` — CPU-bound workload (threads vs processes)
@@ -61,11 +61,11 @@ to manifest in the naive implementation.
 
 ### Rust
 
-Correct version using a mutex:
+Correct version using a mutex with custom parameters:
 
 ```bash
 cd rust
-cargo run --release --bin mutex
+ cargo run --bin mutex_stats -- --trials 20000 --threads 2 --ops 1
 ```
 
 Naive version (expected to fail compilation):
@@ -138,17 +138,15 @@ from runtime to compile time.
 ## Results (screenshots)
 
 ### Python: naive vs locked
-![Python naive](docs/img/python_naive.png)
-![Python locked](docs/img/python_locked.png)
+![Python naive vs locked](docs/img/python_naive_locked.png)
 
-### C++: run and tests
-![C++ run](docs/img/cpp_run.png)
-![C++ tests](docs/img/cpp_tests.png)
+### C++: naive vs locked
+![C++ naive vs locked](docs/img/cpp_naive_locked.png)
 
 ### Rust: compile-time rejection and mutex
-![Rust naive compile error](docs/img/rust_naive_compile_error.png)
-![Rust mutex run](docs/img/rust_mutex.png)
+![Rust naive compile error](docs/img/rust_naive_error.png)
+![Rust mutex stats](docs/img/rust_mutex_stats.png)
 
 ### Python concurrency benchmarks
-![CPU benchmark](docs/img/cpu_bench.png)
-![IO benchmark](docs/img/io_bench.png)
+![CPU benchmark](docs/img/cpu_bound.png)
+![IO benchmark](docs/img/io_bound.png)
